@@ -45,14 +45,13 @@ li {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 input,
 button,
 textarea,
 select {
   font: inherit;
+}
+button {
+  border: none;
+  outline: none;
 }

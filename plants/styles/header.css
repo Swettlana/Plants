@@ -41,7 +41,6 @@ h1 {
   transition: 0.5s;
 }
 
-/*font-family: "Inter", sans-serif;*/
 .logo__img {
   width: 20px;
   height: 100%;
@@ -59,14 +58,12 @@ h1 {
   column-gap: 47px;
 }
 .nav-list__item:hover {
-  font-style: normal;
   font-weight: 700;
   color: #e06733;
   text-decoration: underline;
   transition: 0.5s;
 }
 .nav-list__item_active {
-  font-style: normal;
   font-weight: 700;
   color: #e06733;
   text-decoration: underline;
