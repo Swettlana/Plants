@@ -37,8 +37,10 @@ h1 {
 }
 .logo:hover {
   transform: scale(1.1);
-  border-bottom: 1px solid #e06733;
   transition: 0.5s;
+}
+.logo:hover > h1 {
+  color: #e06733;
 }
 
 .logo__img {
@@ -60,13 +62,11 @@ h1 {
 .nav-list__item:hover {
   font-weight: 700;
   color: #e06733;
-  text-decoration: underline;
   transition: 0.5s;
 }
 .nav-list__item_active {
   font-weight: 700;
   color: #e06733;
-  text-decoration: underline;
   cursor: default;
   pointer-events: none;
 }
