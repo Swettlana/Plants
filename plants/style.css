@@ -3,16 +3,7 @@
 @import "./styles/about.css";
 @import "./styles/service.css";
 
-:root {
-  --main-color-blue: #edf2ec;
-  --main-color-white: #fff;
-  --green: #499a18;
-  --orange: #e06733;
-  --grey: #717171;
-  --dark-grey: #636060;
-}
-
 body {
-  background: var(--white);
+  background: white;
   width: 100%;
 }
