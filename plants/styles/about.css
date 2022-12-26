@@ -3,11 +3,7 @@
   height: 666px;
 }
 .about {
-  width: 1440px;
-  height: 100%;
-  margin: 0 auto;
   padding: 93px 109px;
-  display: flex;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   font-style: normal;

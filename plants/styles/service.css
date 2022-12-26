@@ -4,11 +4,7 @@
   background: #edf2ec;
 }
 .service {
-  width: 1440px;
-  height: 100%;
-  margin: 0 auto;
   padding: 40px 109px;
-  display: flex;
   flex-direction: column;
   row-gap: 88px;
 }

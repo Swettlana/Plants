@@ -2,6 +2,7 @@
 @import "./styles/welcome.css";
 @import "./styles/about.css";
 @import "./styles/service.css";
+@import "./styles/prices.css";
 
 html {
   scroll-behavior: smooth;
@@ -10,4 +11,10 @@ html {
 body {
   background: white;
   width: 100%;
+}
+section {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
 }

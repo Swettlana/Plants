@@ -4,11 +4,7 @@
   background: #edf2ec;
 }
 .welcome {
-  width: 1440px;
-  height: 100%;
-  margin: 0 auto;
   padding: 62px 109px;
-  display: flex;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   font-style: normal;
