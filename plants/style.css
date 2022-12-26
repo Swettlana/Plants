@@ -1,5 +1,6 @@
 @import "./styles/header.css";
 @import "./styles/welcome.css";
+@import "./styles/about.css";
 
 :root {
   --main-color-blue: #edf2ec;
@@ -14,4 +15,3 @@ body {
   background: var(--white);
   width: 100%;
 }
-
