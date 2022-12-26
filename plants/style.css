@@ -1,6 +1,7 @@
 @import "./styles/header.css";
 @import "./styles/welcome.css";
 @import "./styles/about.css";
+@import "./styles/service.css";
 
 :root {
   --main-color-blue: #edf2ec;
