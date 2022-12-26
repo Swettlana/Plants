@@ -3,6 +3,10 @@
 @import "./styles/about.css";
 @import "./styles/service.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
   width: 100%;
