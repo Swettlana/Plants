@@ -27,9 +27,6 @@
   margin-bottom: 44px;
   color: #717171;
 }
-.welcome__content_tittle > span {
-  color: #499a18;
-}
 
 .welcome__content_text {
   width: 525px;
@@ -50,10 +47,4 @@
   border: 2px solid #e06733;
   border-radius: 10px;
   transition: 0.4s;
-}
-
-.welcome__content_button:hover {
-  background: #e06733;
-  color: #fff;
-  cursor: pointer;
 }

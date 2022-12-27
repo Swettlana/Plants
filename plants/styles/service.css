@@ -39,11 +39,6 @@
   transition: 0.4s;
 }
 
-.service-button:hover {
-  background: #e06733;
-  color: #fff;
-  cursor: pointer;
-}
 .services {
   display: flex;
   flex-wrap: wrap;

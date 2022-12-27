@@ -18,3 +18,11 @@ section {
   margin: 0 auto;
   display: flex;
 }
+span {
+  color: #499a18;
+}
+button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
+}
