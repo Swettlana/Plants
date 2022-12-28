@@ -1,9 +1,9 @@
 .prices-wrapper {
   width: 100%;
-  height: 560px;
+  height: 556px;
 }
 .prices {
-  padding: 40px 109px;
+  padding: 38px 109px;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -86,7 +86,7 @@
   line-height: 26px;
   text-align: center;
   color: #e06733;
-  padding-right: px;
+  padding-right: 10px;
   background-color: #fff;
 }
 .prices-right_image {
