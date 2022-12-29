@@ -4,6 +4,7 @@
 @import "./styles/service.css";
 @import "./styles/prices.css";
 @import "./styles/contacts.css";
+@import "./styles/footer.css";
 
 html {
   scroll-behavior: smooth;
