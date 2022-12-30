@@ -1,0 +1,38 @@
+.about-wrapper {
+  width: 100%;
+  height: 666px;
+}
+.about {
+  padding: 93px 109px;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+}
+.about__content {
+  padding-top: 68px;
+}
+.about__content_tittle {
+  width: 463px;
+  font-family: "Inika", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 38px;
+  color: #e06733;
+}
+
+.about__content_text {
+  width: 605px;
+}
+
+.about__img {
+  width: 464px;
+  background-image: url("../assets/about-manstera.png");
+  background-size: 100%;
+  background-position: center;
+}

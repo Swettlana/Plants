@@ -1,0 +1,30 @@
+@import "./styles/header.css";
+@import "./styles/welcome.css";
+@import "./styles/about.css";
+@import "./styles/service.css";
+@import "./styles/prices.css";
+@import "./styles/contacts.css";
+@import "./styles/footer.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  width: 100%;
+}
+section {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+span {
+  color: #499a18;
+}
+button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
+}
