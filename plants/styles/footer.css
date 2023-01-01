@@ -25,13 +25,17 @@ footer {
 .footer__data > a {
   transition: 0.4s;
 }
-.footer__data > a:hover {
+.footer__data > a:hover,
+.footer__school:hover {
   color: #e06733;
   text-decoration: underline;
 }
 .footer__school {
   padding-left: 15px;
+  display: flex;
+  transition: 0.4s;
 }
+
 .footer__social {
   display: flex;
   column-gap: 30px;
