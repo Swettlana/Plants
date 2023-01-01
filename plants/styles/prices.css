@@ -54,6 +54,14 @@
   background: #edf2ec;
   border-radius: 20px;
   justify-content: space-between;
+  transition: 0.4s;
+}
+.accordion__item:hover {
+  cursor: pointer;
+}
+.accordion__item:hover > .accordion__item_button {
+  border: 1px solid #e06733;
+  transform: scale(1.2);
 }
 .accordion__item_text {
   padding-top: 2px;
@@ -73,6 +81,7 @@
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.4s;
 }
 .prices-right_button {
   width: 162px;

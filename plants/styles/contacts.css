@@ -56,4 +56,12 @@
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.4s;
+}
+.contacts__content_accordion:hover {
+  cursor: pointer;
+}
+.contacts__content_accordion:hover > .accordion-button {
+  border: 1px solid #e06733;
+  transform: scale(1.2);
 }
