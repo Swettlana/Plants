@@ -1,0 +1,60 @@
+.header-wrapper {
+  @extend %wrapper-dark;
+}
+
+.header {
+  @include flex-parent();
+  @include font(400, $font-size-nav, 49px);
+  @extend %font-serif;
+  padding: 43px $content-padding 42px;
+  width: $content-width;
+  margin: 0 auto;
+}
+
+.logo {
+  @include flex-parent();
+  @extend %transition;
+  margin-bottom: 3px;
+
+  &:hover {
+    transform: scale(1.1);
+
+    & > .logo__text {
+      color: $color-hover;
+    }
+  }
+
+  &__text {
+    @include font(400, $font-size-nav, 21px);
+    padding-left: 1px;
+    color: $color-text-dark;
+  }
+
+  &__img {
+    @include background-image(url("../assets/logo_img.svg"));
+    width: 21px;
+    height: 22px;
+    margin-bottom: 9px;
+  }
+}
+
+.nav-list {
+  @include flex-parent($justify-content: flex-end);
+  column-gap: 47px;
+  color: $color-text-nav;
+
+  &__item {
+    @extend %transition;
+
+    &:hover {
+      font-weight: 700;
+      color: $color-hover;
+    }
+    &_active {
+      font-weight: 700;
+      color: $color-hover;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}

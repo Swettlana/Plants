@@ -54,7 +54,7 @@
   background: #edf2ec;
   border-radius: 20px;
   justify-content: space-between;
-  transition: 0.4s;
+  @extend %transition;
 }
 .accordion__item:hover {
   cursor: pointer;
@@ -81,14 +81,14 @@
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.4s;
+  @extend %transition;
 }
 .prices-right_button {
   width: 162px;
   height: 50px;
   border: 1px solid #e06733;
   border-radius: 5px;
-  transition: 0.4s;
+  @extend %transition;
   font-family: "Inika", serif;
   font-weight: 700;
   font-size: 20px;

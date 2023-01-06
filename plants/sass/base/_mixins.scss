@@ -1,0 +1,22 @@
+@mixin font($weight, $size, $line-height) {
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin flex-parent(
+  $flex-direction: row,
+  $justify-content: space-between,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin background-image($background-image, $background-size: cover) {
+  background-image: $background-image;
+  background-size: $background-size;
+}

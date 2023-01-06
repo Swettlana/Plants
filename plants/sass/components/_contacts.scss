@@ -56,7 +56,7 @@
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.4s;
+  @extend %transition;
 }
 .contacts__content_accordion:hover {
   cursor: pointer;
