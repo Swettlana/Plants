@@ -7,8 +7,13 @@
   @include font(400, $font-size-nav, 49px);
   @extend %font-serif;
   padding: 43px $content-padding 42px;
-  width: $content-width;
+  max-width: $content-width;
   margin: 0 auto;
+
+  @include media-netbook {
+    max-width: $content-width;
+    padding: 35px $content-padding-tablet;
+  }
 }
 
 .logo {
