@@ -11,10 +11,10 @@
   margin: 0 auto;
 
   @include media-netbook {
-    max-width: $tablet-width;
+    max-width: $tablet-max-width;
     padding: 35px $content-padding-tablet;
   }
-  @include media-small-tablet {
+  @include media-tablet {
     padding: 35px $content-padding-mobile;
   }
   @include media-mobile {
@@ -63,7 +63,7 @@
     }
   }
 
-  @include media-small-tablet {
+  @include media-tablet {
     max-width: 300px;
   }
   @include media-mobile {
