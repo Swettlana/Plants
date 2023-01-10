@@ -343,12 +343,6 @@ footer {
   font-weight: 700;
   color: #e06733;
 }
-.nav-list__item_active {
-  font-weight: 700;
-  color: #e06733;
-  cursor: default;
-  pointer-events: none;
-}
 @media (max-width: 660px) {
   .nav-list {
     max-width: 300px;

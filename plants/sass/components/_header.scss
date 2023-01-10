@@ -61,12 +61,6 @@
       font-weight: 700;
       color: $color-hover;
     }
-    &_active {
-      font-weight: 700;
-      color: $color-hover;
-      cursor: default;
-      pointer-events: none;
-    }
   }
 
   @include media-small-tablet {
