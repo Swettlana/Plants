@@ -10,12 +10,17 @@
   color: $color-text-main;
 
   @include media-netbook {
-    padding: 40px $content-padding-tablet 70px;
+    padding: 40px $content-padding-tablet 95px;
     flex-direction: column;
+    row-gap: 68px;
   }
   @include media-tablet {
     padding: 18px $content-padding-mobile 24px;
     width: 100%;
+  }
+  @include media-mobile {
+    padding: 30px $content-padding-mobile 27px;
+    row-gap: 0;
   }
 
   &__content {
@@ -25,7 +30,13 @@
     padding-top: 8px;
 
     @include media-netbook {
-      width: 100%;
+      max-width: 100%;
+      align-items: center;
+      padding-top: 0;
+      row-gap: 50px;
+    }
+    @include media-mobile {
+      row-gap: 13px;
     }
 
     &_tittle {
@@ -33,6 +44,16 @@
       @include font(400, 40px, 52px);
       color: $color-hover;
       width: 463px;
+
+      @include media-netbook {
+        @include font(400, 35px, 46px);
+        text-align: center;
+        width: 423px;
+      }
+      @include media-mobile {
+        @include font(400, 25px, 33px);
+        padding: 0 25px;
+      }
     }
 
     &_text {
@@ -40,6 +61,9 @@
 
       @include media-netbook {
         width: 100%;
+      }
+      @include media-mobile {
+        @include font(400, 15px, 25px);
       }
     }
   }
@@ -50,5 +74,14 @@
     height: 479px;
     flex-shrink: 0;
     background-position: center;
+
+    @include media-netbook {
+      width: 250px;
+      height: 258px;
+    }
+    @include media-mobile {
+      width: 150px;
+      height: 155px;
+    }
   }
 }
