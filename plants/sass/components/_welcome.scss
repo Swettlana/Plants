@@ -54,7 +54,7 @@
     }
 
     &_tittle {
-      @include font(700px, 45px, 50px);
+      @include font(700, 45px, 50px);
       color: $color-tittle-welcome;
 
       @include media-netbook {

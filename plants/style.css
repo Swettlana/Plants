@@ -5,17 +5,22 @@
   transition: all 0.4s;
 }
 
-.welcome {
+.welcome, .about {
   font-family: "Inter", sans-serif;
 }
 
-.header {
+.header, .about__content_tittle {
   font-family: "Inika", serif;
 }
 
 .welcome-wrapper, .header-wrapper {
   width: 100%;
   background-color: #edf2ec;
+}
+
+.about-wrapper {
+  width: 100%;
+  background-color: #fff;
 }
 
 html {
@@ -79,39 +84,65 @@ button:hover {
 }
 
 .about {
-  padding: 93px 109px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  font-family: "Inter", sans-serif;
+  align-items: center;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  padding: 93px 110px;
   color: #636060;
 }
-
-.about__content {
-  padding-top: 68px;
+@media (max-width: 1024px) {
+  .about {
+    padding: 40px 50px 70px;
+    flex-direction: column;
+  }
 }
-
+@media (max-width: 660px) {
+  .about {
+    padding: 18px 25px 24px;
+    width: 100%;
+  }
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  max-width: 605px;
+  row-gap: 38px;
+  padding-top: 8px;
+}
+@media (max-width: 1024px) {
+  .about__content {
+    width: 100%;
+  }
+}
 .about__content_tittle {
-  width: 463px;
-  font-family: "Inika", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
   line-height: 52px;
-  margin-bottom: 38px;
   color: #e06733;
+  width: 463px;
 }
-
 .about__content_text {
-  width: 605px;
+  width: 100%;
 }
-
+@media (max-width: 1024px) {
+  .about__content_text {
+    width: 100%;
+  }
+}
 .about__img {
+  background-image: url("../../assets/about-manstera.png");
+  background-size: cover;
   width: 464px;
-  background-image: url("../assets/about-manstera.png");
-  background-size: 100%;
+  height: 479px;
+  flex-shrink: 0;
   background-position: center;
 }
 
@@ -635,7 +666,7 @@ footer {
 }
 .welcome__content_tittle {
   font-style: normal;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 45px;
   line-height: 50px;
   color: #717171;
