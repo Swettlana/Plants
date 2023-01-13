@@ -84,13 +84,10 @@
     &_button {
       @include font(400px, 16px, 20px);
       @extend %transition;
-      width: 158px;
-      height: 44px;
+      @include button(158px, 44px, 10px);
       margin-top: 3px;
       text-align: center;
-      color: $color-text-dark;
       border: 2px solid $color-hover;
-      border-radius: 10px;
 
       @include media-mobile {
         font-size: 10px;

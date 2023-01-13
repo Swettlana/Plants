@@ -16,6 +16,14 @@
   align-items: $align-items;
 }
 
+@mixin button($width, $height, $border-radius) {
+  width: $width;
+  height: $height;
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: transparent;
+}
+
 @mixin background-image($background-image, $background-size: cover) {
   background-image: $background-image;
   background-size: $background-size;
