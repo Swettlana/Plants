@@ -1,106 +1,180 @@
 .prices-wrapper {
-  width: 100%;
-  height: 556px;
+  @extend %wrapper-light;
 }
+
 .prices {
-  padding: 38px 109px;
-  justify-content: space-between;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  @include flex-parent($align-items: flex-start);
+  @extend %font-sans-serif;
+  color: $color-text-dark;
+  padding: 39px $content-padding 118px;
+
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 97px;
+  }
+  @include media-tablet {
+    padding: 25px $content-padding-mobile 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 20px;
+  }
+
+  &-left {
+    @include flex-parent(column, start, flex-start);
+    row-gap: 60px;
+
+    @include media-netbook {
+      row-gap: 58px;
+    }
+    @include media-tablet {
+      align-items: center;
+      row-gap: 38px;
+    }
+
+    &_tittle {
+      @include font(700, 40px, 48px);
+
+      @include media-netbook {
+        @include font(700, 35px, 42px);
+        padding-left: 15px;
+      }
+
+      @include media-tablet {
+        @include font(700, 25px, 30px);
+        padding-left: 1px;
+      }
+    }
+  }
+
+  &-right {
+    @include flex-parent(
+      $flex-direction: column,
+      $justify-content: start,
+      $align-items: flex-end
+    );
+    row-gap: 40px;
+
+    @include media-netbook {
+      padding-top: 100px;
+      row-gap: 29px;
+    }
+    @include media-tablet {
+      padding-top: 0;
+      row-gap: 20px;
+      align-items: center;
+    }
+
+    &_tittle {
+      @include font(700, 40px, 50px);
+      max-width: 452px;
+      text-align: right;
+
+      @include media-netbook {
+        @include font(700, 25px, 35px);
+        max-width: 296px;
+      }
+      @include media-tablet {
+        @include font(700, 20px, 35px);
+        max-width: 230px;
+        text-align: center;
+      }
+    }
+
+    &_button {
+      @include button(162px, 50px, 5px);
+      @include font(700, 20px, 26px);
+      @extend %transition;
+      @extend %font-serif;
+      border: 1px solid $color-hover;
+      color: $color-hover;
+
+      @include media-tablet {
+        @include button(121px, 35px, 5px);
+        @include font(700, 15px, 20px);
+      }
+    }
+
+    &_image {
+      margin: -5px 5px 0px 0;
+      width: 152px;
+      height: 175px;
+      background-image: url("../assets/prices-img.png");
+
+      @include media-tablet {
+        display: none;
+      }
+    }
+  }
 }
-.prices-left,
-.prices-right {
-  display: flex;
-  flex-direction: column;
-}
-.prices-left {
-  row-gap: 60px;
-}
-.prices-left_tittle {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  color: #000000;
-}
-.prices-right {
-  align-items: flex-end;
-  row-gap: 40px;
-}
-.prices-right_tittle {
-  width: 452px;
-  text-align: right;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
-  color: #000000;
-}
+
 .accordion {
+  @include flex-parent(column, start, flex-start);
   width: 332px;
   height: 282px;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
   padding: 34px 0;
   row-gap: 33px;
   align-items: center;
-}
-.accordion__item {
-  width: 250px;
-  height: 50px;
-  display: flex;
-  padding: 0 40px;
-  align-items: center;
-  background: #edf2ec;
-  border-radius: 20px;
-  justify-content: space-between;
-  @extend %transition;
-}
-.accordion__item:hover {
-  cursor: pointer;
-}
-.accordion__item:hover > .accordion__item_button {
-  border: 1px solid #e06733;
-  transform: scale(1.2);
-}
-.accordion__item_text {
-  padding-top: 2px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
-  color: #000000;
-}
-.accordion__item_button {
-  width: 16px;
-  height: 16px;
-  background: #d9d9d9;
-  border-radius: 50%;
-  background-image: url("../assets/arrow.svg");
-  background-size: 8px 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-  @extend %transition;
-}
-.prices-right_button {
-  width: 162px;
-  height: 50px;
-  border: 1px solid #e06733;
-  border-radius: 5px;
-  @extend %transition;
-  font-family: "Inika", serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  text-align: center;
-  color: #e06733;
-  padding-right: 10px;
-  background-color: #fff;
-}
-.prices-right_image {
-  margin: -5px 5px 0px 0;
-  width: 152px;
-  height: 175px;
-  background-image: url("../assets/prices-img.png");
+
+  @include media-tablet {
+    width: 224px;
+    height: 235px;
+  }
+  @include media-tablet {
+    padding: 0;
+    justify-content: center;
+    row-gap: 14px;
+  }
+
+  &__item {
+    @extend %transition;
+    @include flex-parent;
+    width: 250px;
+    height: 50px;
+    padding: 0 40px;
+    background: $color-background-dark;
+    border-radius: 20px;
+
+    @include media-tablet {
+      width: 180px;
+      padding: 0;
+    }
+    @include media-tablet {
+      padding: 0 39px 0 31px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & > .accordion__item_button {
+        border: 1px solid $color-hover;
+        transform: scale(1.2);
+      }
+    }
+
+    &_text {
+      @extend %font-sans-serif;
+      @include font(700, 20px, 20px);
+      padding-top: 2px;
+
+      @include media-tablet {
+        @include font(700, 15px, 20px);
+      }
+    }
+
+    &_button {
+      @extend %transition;
+      @include button(16px, 16px, 50%);
+      background: #d9d9d9;
+      background-image: url("../assets/arrow.svg");
+      background-size: 8px 4px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include media-tablet {
+        margin-top: 4px;
+      }
+    }
+  }
 }
