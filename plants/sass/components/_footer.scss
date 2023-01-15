@@ -23,7 +23,7 @@ footer {
   column-gap: 20px;
 }
 .footer__data > a {
-  transition: 0.4s;
+  @extend %transition;
 }
 .footer__data > a:hover,
 .footer__school:hover {
@@ -33,7 +33,7 @@ footer {
 .footer__school {
   padding-left: 15px;
   display: flex;
-  transition: 0.4s;
+  @extend %transition;
 }
 
 .footer__social {
@@ -49,7 +49,7 @@ footer {
   display: flex;
   height: 27px;
   background-size: cover;
-  transition: 0.4s;
+  @extend %transition;
 }
 
 .footer__social_inst {
