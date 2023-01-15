@@ -69,7 +69,7 @@
   }
 
   &__img {
-    @include background-image(url("../../assets/about-manstera.png"));
+    @include background-image(url("../assets/about-manstera.png"));
     width: 464px;
     height: 479px;
     flex-shrink: 0;

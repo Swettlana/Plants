@@ -177,7 +177,7 @@ button:hover {
   }
 }
 .about__img {
-  background-image: url("../../assets/about-manstera.png");
+  background-image: url("../assets/about-manstera.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 464px;
