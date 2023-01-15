@@ -5,15 +5,15 @@
   transition: all 0.4s;
 }
 
-.welcome, .services, .accordion__item_text, .prices, .about {
+.welcome, .services, .accordion__item_text, .prices, .contacts__content_accordion, .about {
   font-family: "Inter", sans-serif;
 }
 
-.service__content, .prices-right_button, .header, .about__content_tittle {
+.service__content, .prices-right_button, .header, .contacts__content_tittle, .about__content_tittle {
   font-family: "Inika", serif;
 }
 
-.welcome-wrapper, .service-wrapper, .header-wrapper {
+.welcome-wrapper, .service-wrapper, .header-wrapper, .contacts-wrapper {
   width: 100%;
   background-color: #edf2ec;
 }
@@ -182,6 +182,7 @@ button:hover {
 .about__img {
   background-image: url("../../assets/about-manstera.png");
   background-size: cover;
+  background-repeat: no-repeat;
   width: 464px;
   height: 479px;
   flex-shrink: 0;
@@ -200,79 +201,146 @@ button:hover {
   }
 }
 
-.contacts-wrapper {
-  width: 100%;
-  height: 550px;
-  background: #edf2ec;
-}
-
 .contacts {
-  padding: 0px 109px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 53px 110px 0;
   column-gap: 113px;
 }
-
+@media (max-width: 1024px) {
+  .contacts {
+    padding: 40px 50px 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 210px;
+  }
+}
+@media (max-width: 660px) {
+  .contacts {
+    padding: 25px 25px 0;
+    row-gap: 92px;
+  }
+}
 .contacts__image {
-  width: 400px;
-  height: 497px;
-  margin-top: 53px;
   background-image: url("../assets/contact.png");
   background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 497px;
+  flex-shrink: 0;
 }
-
+@media (max-width: 1024px) {
+  .contacts__image {
+    order: 2;
+    width: 200px;
+    height: 248px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__image {
+    width: 100px;
+    height: 124px;
+    margin-left: 0;
+  }
+}
 .contacts__content {
   display: flex;
-  flex-direction: column;
-  row-gap: 37px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-basis: 710px;
+  column-gap: 64px;
 }
-
+@media (max-width: 1024px) {
+  .contacts__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 96px;
+    flex-basis: 0;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__content {
+    row-gap: 79px;
+  }
+}
 .contacts__content_tittle {
-  margin-top: 60px;
-  font-family: "Inika";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
+  padding-top: 8px;
   color: #499a18;
 }
-
+@media (max-width: 1024px) {
+  .contacts__content_tittle {
+    padding-top: 0;
+    flex-basis: 0;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__content_tittle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
 .contacts__content_accordion {
-  height: 50px;
-  width: 450px;
-  margin-left: 259px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 35px 0 20px;
-  display: flex;
-  background: #d6e7d2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 40px;
+  flex: 1;
+  margin-top: 96px;
+  height: 50px;
+  padding: 0 35px 0 23px;
+  background: #d6e7d2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.05em;
   color: #717171;
+}
+@media (max-width: 1024px) {
+  .contacts__content_accordion {
+    flex: 0;
+    margin-top: 0;
+    width: 450px;
+    padding: 28px 35px 24px 21px;
+  }
+}
+@media (max-width: 660px) {
+  .contacts__content_accordion {
+    width: 300px;
+    padding: 28px 21px 24px 18px;
+  }
+}
+.contacts__content_accordion:hover {
+  cursor: pointer;
+}
+.contacts__content_accordion:hover > .accordion-button {
+  border: 1px solid #e06733;
+  transform: scale(1.2);
 }
 
 .accordion-button {
   width: 16px;
   height: 16px;
+  text-align: center;
   border-radius: 50%;
+  background-color: transparent;
   background: #aea1a1;
   background-image: url("../assets/arrow-contacts.svg");
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.contacts__content_accordion:hover {
-  cursor: pointer;
-}
-
-.contacts__content_accordion:hover > .accordion-button {
-  border: 1px solid #e06733;
-  transform: scale(1.2);
 }
 
 footer {
@@ -419,6 +487,7 @@ footer {
 .logo__img {
   background-image: url("../assets/logo_img.svg");
   background-size: cover;
+  background-repeat: no-repeat;
   width: 21px;
   height: 22px;
   margin-bottom: 9px;
@@ -898,6 +967,7 @@ footer {
 .welcome__img {
   background-image: url("../assets/welcome.png");
   background-size: cover;
+  background-repeat: no-repeat;
   width: 450px;
   height: 420px;
   flex-shrink: 0;

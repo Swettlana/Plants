@@ -27,6 +27,7 @@
 @mixin background-image($background-image, $background-size: cover) {
   background-image: $background-image;
   background-size: $background-size;
+  background-repeat: no-repeat;
 }
 
 @mixin media-netbook {
