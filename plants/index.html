@@ -24,19 +24,23 @@
         </a>
         <nav class="navigation">
           <ul class="nav-list">
-            <li><a href="#" class="nav-list__item_active">Home</a></li>
+            <li><a href="#home" class="nav-list__item">Home</a></li>
             <li><a href="#about" class="nav-list__item">About us</a></li>
             <li><a href="#service" class="nav-list__item">Service</a></li>
             <li><a href="#prices" class="nav-list__item">Price</a></li>
             <li><a href="#contacts" class="nav-list__item">Contacts</a></li>
           </ul>
+          <div class="burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </div>
         </nav>
       </div>
     </div>
   </header>
   <main>
     <div class="welcome-wrapper">
-      <section class="welcome">
+      <section class="welcome" id="home">
         <div class="welcome__img">
         </div>
         <div class="welcome__content">
@@ -73,32 +77,44 @@
         </div>
         <div class="services">
           <div class="service-item">
-            <img class="service-item_img" alt="Garden care" src="./assets/first.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Garden care" src="./assets/first.png">
+            </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
           <div class="service-item">
-            <img class="service-item_img" alt="Planting" src="./assets/second.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Planting" src="./assets/second.png">
+            </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
           <div class="service-item">
-            <img class="service-item_img" alt="Lawn care" src="./assets/third.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Lawn care" src="./assets/third.png">
+            </div>
             <p class="service-item_tittle">Lawn care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
           <div class="service-item">
-            <img class="service-item_img" alt="Planting" src="./assets/fourth.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Planting" src="./assets/fourth.png">
+            </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
           <div class="service-item">
-            <img class="service-item_img" alt="Garden care" src="./assets/fifth.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Garden care" src="./assets/fifth.png">
+            </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
           <div class="service-item">
-            <img class="service-item_img" alt="Planting" src="./assets/sixth.png">
+            <div class="image-wrapper">
+              <img class="service-item_img" alt="Planting" src="./assets/sixth.png">
+            </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
@@ -146,7 +162,7 @@
     </div>
   </main>
   <div class="footer-wrapper">
-    <footer>
+    <footer class="footer">
       <div class="footer__data">
         <p>&#169;</p>
         <p>2022</p>

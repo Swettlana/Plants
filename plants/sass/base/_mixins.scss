@@ -16,7 +16,34 @@
   align-items: $align-items;
 }
 
+@mixin button($width, $height, $border-radius) {
+  width: $width;
+  height: $height;
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: transparent;
+}
+
 @mixin background-image($background-image, $background-size: cover) {
   background-image: $background-image;
   background-size: $background-size;
+  background-repeat: no-repeat;
+}
+
+@mixin media-netbook {
+  @media (max-width: $netbook-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
 }

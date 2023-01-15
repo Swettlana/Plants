@@ -6,39 +6,95 @@
   @extend %font-sans-serif;
   @include flex-parent();
   padding: 55px $content-padding 57px;
-  column-gap: 231px;
+  column-gap: 10px;
+
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 70px;
+  }
+  @include media-tablet {
+    padding: 18px $content-padding-mobile 24px;
+    width: 100%;
+  }
 
   &__img {
     @include background-image(url("../assets/welcome.png"));
     width: 450px;
     height: 420px;
+    flex-shrink: 0;
     margin-left: -7px;
+
+    @include media-netbook {
+      width: 280px;
+      height: 255px;
+      order: 2;
+      margin-top: -50px;
+    }
+
+    @include media-tablet {
+      display: none;
+    }
   }
 
   &__content {
     @include flex-parent(column, start, flex-start);
-    width: 550px;
+    flex-basis: 550px;
     row-gap: 44px;
     padding-top: 5px;
 
+    @include media-netbook {
+      flex-basis: 341px;
+      order: 1;
+      padding-top: 0;
+      row-gap: 30px;
+    }
+
+    @include media-tablet {
+      flex-basis: 100%;
+      row-gap: 20px;
+    }
+
     &_tittle {
-      @include font(700px, 45px, 50px);
+      @include font(700, 45px, 50px);
       color: $color-tittle-welcome;
+
+      @include media-netbook {
+        font-size: 35px;
+      }
+      @include media-mobile {
+        font-size: 25px;
+        line-height: 35px;
+      }
     }
     &_text {
       @include font(400, 20px, 35px);
       color: $color-text-main;
+      max-width: 525px;
+
+      @include media-netbook {
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 5px;
+      }
+      @include media-mobile {
+        font-size: 16px;
+        line-height: 25px;
+        padding-left: 0;
+      }
     }
     &_button {
       @include font(400px, 16px, 20px);
       @extend %transition;
-      width: 158px;
-      height: 44px;
+      @include button(158px, 44px, 10px);
       margin-top: 3px;
       text-align: center;
-      color: $color-text-dark;
       border: 2px solid $color-hover;
-      border-radius: 10px;
+
+      @include media-mobile {
+        font-size: 10px;
+        width: 100px;
+        height: 34px;
+        margin-top: 6px;
+      }
     }
   }
 }

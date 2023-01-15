@@ -7,14 +7,21 @@ body {
   width: 100%;
 }
 section {
-  width: $content-width;
+  max-width: $content-width;
   margin: 0 auto;
+
+  @include media-netbook {
+    max-width: $tablet-max-width;
+  }
 }
 span {
   color: $color-text-span;
 }
-button:hover {
-  background: $color-hover;
-  color: $color-background-light;
-  cursor: pointer;
+button {
+  background: transparent;
+  &:hover {
+    background: $color-hover;
+    color: $color-background-light;
+    cursor: pointer;
+  }
 }

@@ -1,34 +1,87 @@
+.about-wrapper {
+  @extend %wrapper-light;
+}
+
 .about {
-  padding: 93px 109px;
-  justify-content: space-between;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #636060;
-}
-.about__content {
-  padding-top: 68px;
-}
-.about__content_tittle {
-  width: 463px;
-  font-family: "Inika", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 52px;
-  margin-bottom: 38px;
-  color: #e06733;
-}
+  @extend %font-sans-serif;
+  @include flex-parent();
+  @include font(400, 20px, 30px);
+  padding: 93px $content-padding;
+  color: $color-text-main;
 
-.about__content_text {
-  width: 605px;
-}
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 95px;
+    flex-direction: column;
+    row-gap: 68px;
+  }
+  @include media-tablet {
+    padding: 18px $content-padding-mobile 24px;
+    width: 100%;
+  }
+  @include media-mobile {
+    padding: 30px $content-padding-mobile 27px;
+    row-gap: 0;
+  }
 
-.about__img {
-  width: 464px;
-  background-image: url("../assets/about-manstera.png");
-  background-size: 100%;
-  background-position: center;
+  &__content {
+    @include flex-parent(column, start, flex-start);
+    max-width: 605px;
+    row-gap: 38px;
+    padding-top: 8px;
+
+    @include media-netbook {
+      max-width: 100%;
+      align-items: center;
+      padding-top: 0;
+      row-gap: 50px;
+    }
+    @include media-mobile {
+      row-gap: 13px;
+    }
+
+    &_tittle {
+      @extend %font-serif;
+      @include font(400, 40px, 52px);
+      color: $color-hover;
+      width: 463px;
+
+      @include media-netbook {
+        @include font(400, 35px, 46px);
+        text-align: center;
+        width: 423px;
+      }
+      @include media-mobile {
+        @include font(400, 25px, 33px);
+        padding: 0 25px;
+      }
+    }
+
+    &_text {
+      width: 100%;
+
+      @include media-netbook {
+        width: 100%;
+      }
+      @include media-mobile {
+        @include font(400, 15px, 25px);
+      }
+    }
+  }
+
+  &__img {
+    @include background-image(url("../../assets/about-manstera.png"));
+    width: 464px;
+    height: 479px;
+    flex-shrink: 0;
+    background-position: center;
+
+    @include media-netbook {
+      width: 250px;
+      height: 258px;
+    }
+    @include media-mobile {
+      width: 150px;
+      height: 155px;
+    }
+  }
 }

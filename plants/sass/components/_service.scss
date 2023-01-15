@@ -1,81 +1,144 @@
 .service-wrapper {
-  width: 100%;
-  height: 1300px;
-  background: #edf2ec;
+  @extend %wrapper-dark;
 }
 .service {
-  padding: 40px 109px;
-  flex-direction: column;
-  row-gap: 88px;
-}
-.service__content {
-  font-family: "Inika", serif;
-  font-style: normal;
-  display: flex;
-  column-gap: 142px;
-  height: 94px;
-}
-.service__content-tittle {
-  width: 306px;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 52px;
-  color: #499a18;
-}
-.service__content-buttons {
-  display: flex;
-  column-gap: 37px;
-  padding-top: 13px;
-}
-.service-button {
-  width: 161px;
-  height: 50px;
-  margin-top: 15px;
-  border: 1px solid #e06733;
-  border-radius: 5px;
-  font-size: 20px;
-  line-height: 26px;
-  color: #e06733;
-  @extend %transition;
+  @include flex-parent(column, start, flex-start);
+  padding: 40px $content-padding 121px;
+  row-gap: 80px;
+
+  @include media-netbook {
+    padding: 60px $content-padding-tablet 70px;
+    row-gap: 29px;
+  }
+  @include media-tablet {
+    padding: 60px $content-padding-mobile 90px;
+    row-gap: 39px;
+  }
+  @include media-mobile {
+    padding: 30px $content-padding-mobile 27px;
+  }
+
+  &__content {
+    @extend %font-serif;
+    @include flex-parent();
+    flex-wrap: wrap;
+    column-gap: 142px;
+    row-gap: 43px;
+
+    @include media-tablet {
+      row-gap: 38px;
+    }
+
+    &-tittle {
+      @include font(400, 40px, 52px);
+      width: 306px;
+      color: $color-text-span;
+
+      @include media-netbook {
+        @include font(400, 35px, 46px);
+      }
+      @include media-tablet {
+        @include font(400, 25px, 33px);
+        width: 187px;
+      }
+    }
+
+    &-buttons {
+      @include flex-parent();
+      flex-wrap: wrap;
+      row-gap: 9px;
+      column-gap: 37px;
+      padding-bottom: 10px;
+
+      @include media-tablet {
+        justify-content: start;
+        column-gap: 10px;
+        padding-bottom: 0;
+      }
+    }
+
+    .service-button {
+      @extend %transition;
+      @include button(161px, 50px, 5px);
+      @include font(400, 20px, 26px);
+      margin-top: 15px;
+      border: 1px solid $color-hover;
+      color: $color-hover;
+
+      @include media-netbook {
+        margin-top: 0;
+      }
+      @include media-tablet {
+        @include button(121px, 35px, 5px);
+        @include font(400, 15px, 20px);
+      }
+    }
+  }
 }
 
 .services {
-  display: flex;
+  @extend %font-sans-serif;
+  @include flex-parent($justify-content: center);
   flex-wrap: wrap;
   column-gap: 116px;
   row-gap: 55px;
+
+  @include media-netbook {
+    column-gap: 107px;
+    row-gap: 38px;
+  }
+  @include media-tablet {
+    row-gap: 34px;
+  }
 }
 .service-item {
-  width: 330px;
+  @include flex-parent(column, start, center);
+  @extend %transition;
+  width: 329px;
   height: 450px;
   border-radius: 20px;
   border: 1px solid #e3e1d5;
-  display: flex;
-  flex-direction: column;
   row-gap: 10px;
-  align-items: center;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  line-height: 20px;
-  @extend %transition;
-}
-.service-item:hover {
-  cursor: pointer;
-  border: 1px solid #e06733;
-  transform: scale(1.1);
-}
-.service-item_img {
-  height: 350px;
-  object-fit: contain;
-}
-.service-item_tittle {
-  font-weight: 700;
-  font-size: 20px;
-  color: #e06733;
-}
-.service-item_text {
-  font-weight: 400;
-  font-size: 16px;
-  color: #717171;
-  margin-top: 5px;
+  overflow: hidden;
+
+  @include media-netbook {
+    width: 280px;
+    row-gap: 8px;
+  }
+  //@include media-tablet {
+  //}
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $color-hover;
+    transform: scale(1.1);
+  }
+  .image-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+  }
+  &_img {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  &_tittle {
+    @include font(700, 20px, 20px);
+    color: $color-hover;
+  }
+
+  &_text {
+    @include font(400, 16px, 20px);
+    color: $color-tittle-welcome;
+    margin-top: 6px;
+
+    @include media-netbook {
+      padding: 0 37px;
+      text-align: center;
+    }
+  }
 }

@@ -7,8 +7,19 @@
   @include font(400, $font-size-nav, 49px);
   @extend %font-serif;
   padding: 43px $content-padding 42px;
-  width: $content-width;
+  max-width: $content-width;
   margin: 0 auto;
+
+  @include media-netbook {
+    max-width: $tablet-max-width;
+    padding: 35px $content-padding-tablet;
+  }
+  @include media-tablet {
+    padding: 35px $content-padding-mobile;
+  }
+  @include media-mobile {
+    align-items: flex-start;
+  }
 }
 
 .logo {
@@ -39,8 +50,8 @@
 }
 
 .nav-list {
-  @include flex-parent($justify-content: flex-end);
-  column-gap: 47px;
+  @include flex-parent();
+  width: 452px;
   color: $color-text-nav;
 
   &__item {
@@ -50,11 +61,12 @@
       font-weight: 700;
       color: $color-hover;
     }
-    &_active {
-      font-weight: 700;
-      color: $color-hover;
-      cursor: default;
-      pointer-events: none;
-    }
+  }
+
+  @include media-tablet {
+    max-width: 300px;
+  }
+  @include media-mobile {
+    display: none;
   }
 }
