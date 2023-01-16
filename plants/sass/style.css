@@ -373,6 +373,7 @@ button:hover {
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  column-gap: 20px;
 }
 @media (max-width: 1024px) {
   .footer__data {

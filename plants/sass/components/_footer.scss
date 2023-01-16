@@ -24,6 +24,7 @@
 
   &__data {
     @include flex-parent($justify-content: start);
+    column-gap: 20px;
 
     @include media-netbook {
       line-height: 24px;
