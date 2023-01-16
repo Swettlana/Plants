@@ -70,7 +70,7 @@
 
     &_inst {
       @extend %transition;
-      @include background-image(url("../../assets/insta.svg"));
+      @include background-image(url("../assets/insta.svg"));
       display: block;
       width: 27px;
       height: 27px;
@@ -83,7 +83,7 @@
 
     &_facebook {
       @extend %transition;
-      @include background-image(url("../../assets/face.svg"));
+      @include background-image(url("../assets/face.svg"));
       display: block;
       width: 17px;
       height: 27px;
@@ -102,7 +102,7 @@
 
     &_twitter {
       @extend %transition;
-      @include background-image(url("../../assets/tvit.svg"));
+      @include background-image(url("../assets/tvit.svg"));
       display: block;
       width: 27px;
       height: 22px;
@@ -121,7 +121,7 @@
 
     &_pinterest {
       @extend %transition;
-      @include background-image(url("../../assets/pinterest.svg"));
+      @include background-image(url("../assets/pinterest.svg"));
       display: block;
       width: 27px;
       height: 27px;
