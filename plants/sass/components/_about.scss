@@ -52,7 +52,8 @@
       }
       @include media-mobile {
         @include font(400, 25px, 33px);
-        padding: 0 25px;
+        width: 100%;
+        padding: 0 20px;
       }
     }
 

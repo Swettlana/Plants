@@ -157,7 +157,8 @@ button:hover {
     font-weight: 400;
     font-size: 25px;
     line-height: 33px;
-    padding: 0 25px;
+    width: 100%;
+    padding: 0 20px;
   }
 }
 .about__content_text {
