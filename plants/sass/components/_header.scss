@@ -67,6 +67,29 @@
     max-width: 300px;
   }
   @include media-mobile {
-    display: none;
+    & > li {
+      @include font(400, 20px, 30px);
+    }
+
+    @include flex-parent(column, start, flex-start);
+    position: fixed;
+    transition: all 1s;
+    background-color: $color-background-light;
+    padding: 50px 5px 20px 20px;
+    color: $color-text-main;
+    width: 200px;
+    row-gap: 10px;
+    border-bottom-left-radius: 15px;
+    border-left: 2px solid $color-hover;
+    border-bottom: 2px solid $color-hover;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+
+  &.open {
+    transition: all 1s;
+    right: 0;
   }
 }

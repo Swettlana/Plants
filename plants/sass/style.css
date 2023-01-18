@@ -1,4 +1,4 @@
-.welcome__content_button, .service-item, .service__content .service-button, .accordion__item_button, .accordion__item, .prices-right_button, .nav-list__item, .logo, .footer__social_pinterest, .footer__social_twitter, .footer__social_facebook, .footer__social_inst, .footer__school, .footer__data > a, .accordion-button {
+.welcome__content_button, .service-item, .service__content .service-button, .accordion__item_button, .accordion__item, .prices-right_button, .nav-list__item, .logo, .footer__social_pinterest, .footer__social_twitter, .footer__social_facebook, .footer__social_inst, .footer__school, .footer__data > a, .accordion-button, .burger {
   transition: all 0.4s;
 }
 
@@ -27,6 +27,10 @@ html {
 body {
   background: #fff;
   width: 100%;
+  position: relative;
+}
+body.open-menu {
+  overflow: hidden;
 }
 
 section {
@@ -58,6 +62,7 @@ button:hover {
   width: 100%;
   height: 2px;
   background-color: #717171;
+  transition: all 0.6s;
 }
 
 .burger {
@@ -67,6 +72,8 @@ button:hover {
   position: relative;
   border-top: 2px solid #717171;
   border-bottom: 2px solid #717171;
+  cursor: pointer;
+  z-index: 100;
 }
 @media (max-width: 430px) {
   .burger {
@@ -78,6 +85,32 @@ button:hover {
 }
 .burger::before {
   bottom: 6px;
+}
+.burger.open {
+  border: none;
+}
+.burger.open::after {
+  width: 80%;
+  transform: rotate(45deg);
+  background-color: #e06733;
+}
+.burger.open::before {
+  width: 80%;
+  transform: translateY(-11px) rotate(-45deg);
+  background-color: #e06733;
+}
+
+.overlay {
+  display: none;
+}
+.overlay.open {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .about {
@@ -559,8 +592,35 @@ button:hover {
 }
 @media (max-width: 430px) {
   .nav-list {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    position: fixed;
+    transition: all 1s;
+    background-color: #fff;
+    padding: 50px 5px 20px 20px;
+    color: #636060;
+    width: 200px;
+    row-gap: 10px;
+    border-bottom-left-radius: 15px;
+    border-left: 2px solid #e06733;
+    border-bottom: 2px solid #e06733;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
   }
+  .nav-list > li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.nav-list.open {
+  transition: all 1s;
+  right: 0;
 }
 
 .prices {

@@ -5,7 +5,13 @@ html {
 body {
   background: $color-background-light;
   width: 100%;
+  position: relative;
+
+  &.open-menu {
+    overflow: hidden;
+  }
 }
+
 section {
   max-width: $content-width;
   margin: 0 auto;
