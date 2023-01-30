@@ -47,15 +47,6 @@ span {
   color: #499a18;
 }
 
-button {
-  background: transparent;
-}
-button:hover {
-  background: #e06733;
-  color: #fff;
-  cursor: pointer;
-}
-
 .burger::before, .burger::after {
   position: absolute;
   content: "";
@@ -366,12 +357,17 @@ button:hover {
   height: 16px;
   text-align: center;
   border-radius: 50%;
-  background-color: transparent;
+  background: transparent;
   background: #aea1a1;
   background-image: url("../assets/arrow-contacts.svg");
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
+}
+.accordion-button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
 }
 
 .footer {
@@ -459,6 +455,10 @@ button:hover {
   display: block;
   width: 27px;
   height: 27px;
+}
+.footer__social_inst:hover {
+  transform: scale(1.1);
+  filter: invert(44%) sepia(97%) saturate(1096%) hue-rotate(342deg) brightness(94%) contrast(87%);
 }
 .footer__social_inst > a {
   width: 100%;
@@ -739,7 +739,7 @@ button:hover {
   height: 50px;
   text-align: center;
   border-radius: 5px;
-  background-color: transparent;
+  background: transparent;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -747,17 +747,27 @@ button:hover {
   border: 1px solid #e06733;
   color: #e06733;
 }
+.prices-right_button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
+}
 @media (max-width: 660px) {
   .prices-right_button {
     width: 121px;
     height: 35px;
     text-align: center;
     border-radius: 5px;
-    background-color: transparent;
+    background: transparent;
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 20px;
+  }
+  .prices-right_button:hover {
+    background: #e06733;
+    color: #fff;
+    cursor: pointer;
   }
 }
 .prices-right_image {
@@ -847,12 +857,17 @@ button:hover {
   height: 16px;
   text-align: center;
   border-radius: 50%;
-  background-color: transparent;
+  background: transparent;
   background: #d9d9d9;
   background-image: url("../assets/arrow.svg");
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: center;
+}
+.accordion__item_button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
 }
 @media (max-width: 660px) {
   .accordion__item_button {
@@ -942,18 +957,23 @@ button:hover {
   }
 }
 .service__content .service-button {
-  width: 161px;
-  height: 50px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: transparent;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
+  width: 161px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  background: transparent;
   margin-top: 15px;
   border: 1px solid #e06733;
   color: #e06733;
+}
+.service__content .service-button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
 }
 @media (max-width: 1024px) {
   .service__content .service-button {
@@ -966,11 +986,16 @@ button:hover {
     height: 35px;
     text-align: center;
     border-radius: 5px;
-    background-color: transparent;
+    background: transparent;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
+  }
+  .service__content .service-button:hover {
+    background: #e06733;
+    color: #fff;
+    cursor: pointer;
   }
 }
 
@@ -1165,10 +1190,15 @@ button:hover {
   height: 44px;
   text-align: center;
   border-radius: 10px;
-  background-color: transparent;
+  background: transparent;
   margin-top: 3px;
   text-align: center;
   border: 2px solid #e06733;
+}
+.welcome__content_button:hover {
+  background: #e06733;
+  color: #fff;
+  cursor: pointer;
 }
 @media (max-width: 430px) {
   .welcome__content_button {

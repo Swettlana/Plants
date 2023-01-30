@@ -21,7 +21,12 @@
   height: $height;
   text-align: center;
   border-radius: $border-radius;
-  background-color: transparent;
+  background: transparent;
+  &:hover {
+    background: $color-hover;
+    color: $color-background-light;
+    cursor: pointer;
+  }
 }
 
 @mixin background-image($background-image, $background-size: cover) {

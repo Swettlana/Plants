@@ -67,49 +67,49 @@
       <section class="service" id="service">
         <div class="service__content">
           <h2 class="service__content-tittle">Service and our projects</h2>
-          <div class="service__content-buttons">
+          <div id="service-buttons" class="service__content-buttons">
             <button class="service-button">Gardens</button>
             <button class="service-button">Lawn</button>
             <button class="service-button">Planting</button>
           </div>
         </div>
         <div class="services">
-          <div class="service-item">
+          <div class="service-item" data-category="Gardens">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Garden care" src="./assets/first.png">
             </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/second.png">
             </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Lawn">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Lawn care" src="./assets/third.png">
             </div>
             <p class="service-item_tittle">Lawn care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/fourth.png">
             </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Gardens">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Garden care" src="./assets/fifth.png">
             </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/sixth.png">
             </div>
@@ -168,13 +168,14 @@
       </div>
       <a class="footer__school" href="https://rs.school/js-stage0/" target="blank">Rolling Scopes School</a>
       <ul class="footer__social">
-        <li class="footer__social_inst"><a target="blank" href="https://www.instagram.com/"></a></li>
+        <li><a class="footer__social_inst" target="blank" href="https://www.instagram.com/"></a></li>
         <li><a class="footer__social_facebook" target="blank" href="https://www.facebook.com/"></a></li>
         <li><a class="footer__social_twitter" target="blank" href="https://twitter.com/"></a></li>
         <li><a class="footer__social_pinterest" target="blank" href="https://www.pinterest.com/"></a></li>
       </ul>
     </footer>
   </div>
-  <script src="./script.js"></script>
+  <script src="./scripts/burger-menu.js"></script>
+  <script src="./scripts/services.js"></script>
 </body>
 </html>

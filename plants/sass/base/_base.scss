@@ -23,11 +23,3 @@ section {
 span {
   color: $color-text-span;
 }
-button {
-  background: transparent;
-  &:hover {
-    background: $color-hover;
-    color: $color-background-light;
-    cursor: pointer;
-  }
-}

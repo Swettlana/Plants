@@ -59,8 +59,8 @@
 
     .service-button {
       @extend %transition;
-      @include button(161px, 50px, 5px);
       @include font(400, 20px, 26px);
+      @include button(161px, 50px, 5px);
       margin-top: 15px;
       border: 1px solid $color-hover;
       color: $color-hover;
