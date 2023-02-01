@@ -969,16 +969,24 @@ span {
   margin-top: 15px;
   border: 1px solid #e06733;
   color: #e06733;
+  transition: 0.5s;
+  transition: background 1s;
 }
 .service__content .service-button:hover {
   background: #e06733;
   color: #fff;
   cursor: pointer;
 }
+.service__content .service-button:hover {
+  background: transparent;
+  transform: scale(0.95);
+  color: #000;
+  border: 1px solid #000;
+}
 .service__content .service-button.active {
-  background: #e06733;
   color: #fff;
   cursor: pointer;
+  background: #e06733;
 }
 @media (max-width: 1024px) {
   .service__content .service-button {
@@ -1036,6 +1044,7 @@ span {
   border: 1px solid #e3e1d5;
   row-gap: 10px;
   overflow: hidden;
+  transition: all 1s;
 }
 .service-item.blur {
   filter: blur(5px);
@@ -1045,11 +1054,6 @@ span {
     width: 280px;
     row-gap: 8px;
   }
-}
-.service-item:hover {
-  cursor: pointer;
-  border: 1px solid #e06733;
-  transform: scale(1.1);
 }
 .service-item .image-wrapper {
   display: flex;

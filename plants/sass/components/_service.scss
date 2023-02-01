@@ -64,11 +64,20 @@
       margin-top: 15px;
       border: 1px solid $color-hover;
       color: $color-hover;
+      transition: 0.5s;
+      transition: background 1s;
+
+      &:hover {
+        background: transparent;
+        transform: scale(0.95);
+        color: $color-text-dark;
+        border: 1px solid $color-text-dark;
+      }
 
       &.active {
-        background: $color-hover;
         color: $color-background-light;
         cursor: pointer;
+        background: $color-hover;
       }
 
       @include media-netbook {
@@ -106,6 +115,7 @@
   border: 1px solid #e3e1d5;
   row-gap: 10px;
   overflow: hidden;
+  transition: all 1s;
 
   &.blur {
     filter: blur(5px);
@@ -115,14 +125,7 @@
     width: 280px;
     row-gap: 8px;
   }
-  //@include media-tablet {
-  //}
 
-  &:hover {
-    cursor: pointer;
-    border: 1px solid $color-hover;
-    transform: scale(1.1);
-  }
   .image-wrapper {
     display: flex;
     align-items: center;
