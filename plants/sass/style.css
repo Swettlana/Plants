@@ -1,4 +1,4 @@
-.welcome__content_button, .service-item, .service__content .service-button, .accordion__item_close div, .accordion__item, .prices-right_button, .nav-list__item, .logo, .footer__social_pinterest, .footer__social_twitter, .footer__social_facebook, .footer__social_inst, .footer__school, .footer__data > a, .accordion-button, .burger {
+.welcome__content_button, .service-item, .service__content .service-button, .accordion__item, .prices-right_button, .nav-list__item, .logo, .footer__social_pinterest, .footer__social_twitter, .footer__social_facebook, .footer__social_inst, .footer__school, .footer__data > a, .accordion-button, .burger {
   transition: all 0.4s;
 }
 
@@ -794,6 +794,18 @@ span {
   row-gap: 33px;
   align-items: center;
 }
+@media (max-width: 660px) {
+  .accordion {
+    width: 224px;
+  }
+}
+@media (max-width: 660px) {
+  .accordion {
+    padding: 0;
+    justify-content: center;
+    row-gap: 14px;
+  }
+}
 .accordion__item {
   display: flex;
   flex-direction: column;
@@ -827,6 +839,7 @@ span {
   }
 }
 .accordion__item_close div {
+  transition: 2s;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -846,6 +859,9 @@ span {
 .accordion__item_close div:hover {
   border: 1px solid #e06733;
 }
+.accordion__item_close div:active {
+  background: #aea1a1;
+}
 @media (max-width: 660px) {
   .accordion__item_close div {
     margin-top: 4px;
@@ -859,12 +875,18 @@ span {
 .accordion__item_close.active div {
   background: #aea1a1;
 }
+.accordion__item_close.active div::before {
+  width: 0;
+  height: 0;
+}
 .accordion__item_close.active div::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url("../assets/arrow.svg");
+  transform: rotate(-180deg);
+  transition: 2s;
   background-size: 12px 8px;
   background-repeat: no-repeat;
   background-position: center;
@@ -904,11 +926,20 @@ span {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 86px;
   height: 25px;
   border-radius: 10px;
   background-color: #fff;
   color: #717171;
+}
+.accordion__item_open button a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .accordion__item_open::after {
   content: "";
