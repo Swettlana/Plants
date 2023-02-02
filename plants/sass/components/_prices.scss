@@ -6,7 +6,7 @@
   @include flex-parent($align-items: flex-start);
   @extend %font-sans-serif;
   color: $color-text-dark;
-  padding: 39px $content-padding 118px;
+  padding: 39px $content-padding 94px;
 
   @include media-netbook {
     padding: 40px $content-padding-tablet 97px;
@@ -110,71 +110,160 @@
 .accordion {
   @include flex-parent(column, start, flex-start);
   width: 332px;
-  height: 282px;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
-  padding: 34px 0;
+  padding: 34px 41px;
   row-gap: 33px;
   align-items: center;
 
-  @include media-tablet {
-    width: 224px;
-    height: 235px;
-  }
-  @include media-tablet {
-    padding: 0;
-    justify-content: center;
-    row-gap: 14px;
-  }
+  //@include media-tablet {
+  //  width: 224px;
+  //  height: 235px;
+  //}
+  //@include media-tablet {
+  //  padding: 0;
+  //  justify-content: center;
+  //  row-gap: 14px;
+  //}
 
   &__item {
     @extend %transition;
-    @include flex-parent;
-    width: 250px;
-    height: 50px;
-    padding: 0 40px;
-    background: $color-background-dark;
-    border-radius: 20px;
+    @include flex-parent(column, start, flex-start);
+    width: 100%;
 
-    @include media-tablet {
-      width: 180px;
-      padding: 0;
-    }
-    @include media-tablet {
-      padding: 0 39px 0 31px;
-    }
+    &_close {
+      @include flex-parent;
+      width: 100%;
+      padding: 14px 40px;
+      background: $color-background-dark;
+      border-radius: 20px;
 
-    &:hover {
-      cursor: pointer;
+      p {
+        @extend %font-sans-serif;
+        @include font(700, 20px, 20px);
+        padding-top: 2px;
 
-      & > .accordion__item_button {
-        border: 1px solid $color-hover;
-        transform: scale(1.2);
+        @include media-tablet {
+          @include font(700, 15px, 20px);
+        }
+      }
+
+      div {
+        @extend %transition;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: relative;
+        background: #d9d9d9;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: url("../assets/arrow.svg");
+          background-size: 12px 8px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        &:hover {
+          border: 1px solid $color-hover;
+        }
+
+        @include media-tablet {
+          margin-top: 4px;
+        }
+      }
+      &.active {
+        background: $color-accordion-open;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        div {
+          background: $color-accordion-button-open;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/arrow.svg");
+            background-size: 12px 8px;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(0) saturate(100%) invert(99%) sepia(95%)
+              saturate(2%) hue-rotate(317deg) brightness(116%) contrast(100%);
+          }
+        }
       }
     }
 
-    &_text {
+    &_open {
+      display: none;
       @extend %font-sans-serif;
-      @include font(700, 20px, 20px);
-      padding-top: 2px;
+      position: relative;
+      width: 100%;
+      padding: 0 40px 12px;
+      background: $color-accordion-open;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 
-      @include media-tablet {
-        @include font(700, 15px, 20px);
+      .description {
+        @include font(300, 10px, 10px);
+        padding: 6px 0;
+        color: $color-tittle-welcome;
+      }
+
+      .price {
+        @include font(400, 12px, 20px);
+        padding: 0 0 12px;
+        color: $color-text-dark;
+
+        span {
+          font-weight: 700;
+          color: $color-hover;
+        }
+      }
+
+      button {
+        @include font(700, 14px, 20px);
+        width: 86px;
+        height: 25px;
+        border-radius: 10px;
+        background-color: $color-background-light;
+        color: $color-tittle-welcome;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 40px;
+        width: 164px;
+        height: 1px;
+        background-color: $color-accordion-button-open;
+      }
+
+      &.active {
+        @include flex-parent(column, start, flex-start);
       }
     }
 
-    &_button {
-      @extend %transition;
-      @include button(16px, 16px, 50%);
-      background: #d9d9d9;
-      background-image: url("../assets/arrow.svg");
-      background-size: 8px 4px;
-      background-repeat: no-repeat;
-      background-position: center;
+    //@include media-tablet {
+    //  width: 180px;
+    //  padding: 0;
+    //}
+    //@include media-tablet {
+    //  padding: 0 39px 0 31px;
+    //}
 
-      @include media-tablet {
-        margin-top: 4px;
-      }
-    }
+    //&:hover {
+    //  cursor: pointer;
+
+    //  & > .accordion__item_button {
+    //    border: 1px solid $color-hover;
+    //    transform: scale(1.2);
+    //  }
+    //}
   }
 }
