@@ -801,7 +801,7 @@ span {
 }
 @media (max-width: 660px) {
   .accordion {
-    padding: 0;
+    padding: 29px 22px;
     justify-content: center;
     row-gap: 14px;
   }
@@ -822,6 +822,11 @@ span {
   padding: 14px 40px;
   background: #edf2ec;
   border-radius: 20px;
+}
+@media (max-width: 660px) {
+  .accordion__item_close {
+    padding: 14px 40px 14px 30px;
+  }
 }
 .accordion__item_close p {
   font-style: normal;
@@ -901,6 +906,11 @@ span {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+@media (max-width: 660px) {
+  .accordion__item_open {
+    padding: 0 30px 12px;
+  }
+}
 .accordion__item_open .description {
   font-style: normal;
   font-weight: 300;
@@ -949,6 +959,12 @@ span {
   width: 164px;
   height: 1px;
   background-color: #aea1a1;
+}
+@media (max-width: 660px) {
+  .accordion__item_open::after {
+    left: 0;
+    width: 100%;
+  }
 }
 .accordion__item_open.active {
   display: flex;
