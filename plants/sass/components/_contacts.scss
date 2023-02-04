@@ -70,41 +70,6 @@
         @include font(700, 25px, 33px);
       }
     }
-
-    &_accordion {
-      @include flex-parent();
-      @include font(400, 20px, 40px);
-      @extend %font-sans-serif;
-      flex: 1;
-      margin-top: 96px;
-      height: 50px;
-      padding: 0 35px 0 23px;
-      background: #d6e7d2;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      letter-spacing: 0.05em;
-      color: $color-tittle-welcome;
-
-      @include media-netbook {
-        flex: 0;
-        margin-top: 0;
-        width: 450px;
-        padding: 28px 35px 24px 21px;
-      }
-
-      @include media-tablet {
-        width: 300px;
-        padding: 28px 21px 24px 18px;
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        & > .accordion-button {
-          border: 1px solid #e06733;
-          transform: scale(1.2);
-        }
-      }
-    }
   }
 }
 

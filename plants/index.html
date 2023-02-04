@@ -178,9 +178,33 @@
         </div>
         <div class="contacts__content">
           <h2 class="contacts__content_tittle">Contact us</h2>
-          <div class="contacts__content_accordion">
-            <p class="accordion-text">City</p>
-            <div class="accordion-button"></div>
+          <div class="select" id="select">
+            <div class="select__header" id="select-header">
+              <p class="select__header_tettle" id="select-tittle">City</p>
+              <div class="select__header_button"></div>
+            </div>
+            <div class="select__body" id="select-body">
+              <div class="select__body_item">Canandaigua, NY
+              </div>
+              <div class="select__body_item">New York City </div>
+              <div class="select__body_item">Yonkers, NY </div>
+              <div class="select__body_item">Sherrill, NY </div>
+            </div>
+            <div class="select__addition-info" id="city-info">
+              <div>
+                <p class="caption">City:</p>
+                <p id="city" class="info-value">Canandaigua, NY</p>
+              </div>
+              <div>
+                <p class="caption">Phone:</p>
+                <p class="info-value" id="phone">+1 585 393 0001</p>
+              </div>
+              <div>
+                <p class="caption">Office address:</p>
+                <p class="info-value" id="address">151 Charlotte Street</p>
+              </div>
+              <a href="tel:+12124560002" class="call" id="call">Call us</a>
+            </div>
           </div>
         </div>
       </section>
@@ -205,5 +229,6 @@
   <script src="./scripts/burger-menu.js"></script>
   <script src="./scripts/services.js"></script>
   <script src="./scripts/accordion.js"></script>
+  <script src="./scripts/select.js"></script>
 </body>
 </html>

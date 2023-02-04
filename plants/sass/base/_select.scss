@@ -1,0 +1,153 @@
+.select {
+  @include flex-parent(
+    $flex-direction: column,
+    $justify-content: start,
+    $align-items: center
+  );
+  flex: 1;
+  @include font(400, 20px, 40px);
+  @extend %font-sans-serif;
+  padding-top: 96px;
+
+  &__header {
+    @include flex-parent();
+    width: 100%;
+    padding: 5px 35px 5px 23px;
+    background-color: #d6e7d2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.05em;
+    color: $color-tittle-welcome;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      box-shadow: none;
+      background: $color-select-header-active;
+      border: 1px solid $color-accordion-open;
+    }
+    &:hover > &_button {
+      background: $color-accordion-button-open;
+      background-image: url("../assets/arrow-select.svg");
+      background-size: 12px 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @include media-netbook {
+      flex: 0;
+      margin-top: 0;
+      width: 450px;
+      padding: 28px 35px 24px 21px;
+    }
+
+    @include media-tablet {
+      width: 300px;
+      padding: 28px 21px 24px 18px;
+    }
+    &_button {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: $color-accordion-button-open;
+      background-image: url("../assets/arrow-select.svg");
+      background-size: 12px 8px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &::hover {
+        background-color: #8ba07e;
+        background-image: url("../assets/arrow-select.svg");
+        background-size: 12px 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+    @include font(400, 16px, 40px);
+    width: 100%;
+    background: #dce9d9;
+    padding: 27px 26px;
+
+    &_item {
+      width: 100%;
+      border-bottom: 1px solid #d9d9d9;
+      letter-spacing: 0.05em;
+      color: #499a18;
+      cursor: pointer;
+
+      &:hover {
+        color: #717171;
+        border-bottom: 1px solid #717171;
+      }
+    }
+  }
+
+  //OPEN SELECT
+  &.active &__header {
+    box-shadow: none;
+    background: $color-select-header-active;
+    border: 1px solid $color-accordion-open;
+  }
+
+  &.active &__header_button {
+    background: #8ba07e;
+    background-image: url("../assets/arrow-select.svg");
+    background-size: 12px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+  }
+
+  &.active &__body {
+    @include flex-parent(
+      $flex-direction: column,
+      $justify-content: start,
+      $align-items: start
+    );
+  }
+
+  //ADDITION INFORMATION
+  &__addition-info {
+    display: none;
+    margin-top: 47px;
+    padding: 17px 35px 32px 35px;
+    width: 100%;
+    row-gap: 5px;
+    background: #edf2ec;
+    border: 1px solid #000000;
+    border-radius: 20px;
+
+    div {
+      @include flex-parent($align-items: start, $justify-content: start);
+      @include font(400, 16px, 40px);
+      width: 100%;
+      column-gap: 5px;
+
+      .caption {
+        width: 125px;
+        color: #000000;
+      }
+
+      .info-value {
+        color: #717171;
+      }
+    }
+
+    .call {
+      @include flex-parent($justify-content: center);
+      @extend %transition;
+      @include font(700, 10px, 13px);
+      @include button(122px, 26px, 5px);
+      color: #717171;
+      border: 1px solid #e06733;
+      margin-top: 20px;
+    }
+
+    &.active {
+      @include flex-parent($justify-content: start, $flex-direction: column);
+    }
+  }
+}
