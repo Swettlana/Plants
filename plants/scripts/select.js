@@ -46,6 +46,13 @@ const fullCityInfo = (cityName) => {
 };
 
 headerSelect.onclick = () => {
+  if (selectValue.innerHTML.trim() !== "City") {
+    if (cityInfo.classList.contains("active")) {
+      cityInfo.classList.remove("active");
+    } else {
+      cityInfo.classList.add("active");
+    }
+  }
   headerSelect.parentElement.classList.toggle("active");
 };
 
