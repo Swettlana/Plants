@@ -1,0 +1,88 @@
+.contacts-wrapper {
+  @extend %wrapper-dark;
+}
+
+.contacts {
+  @include flex-parent($align-items: flex-start);
+  padding: 53px $content-padding 0;
+  column-gap: 113px;
+
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 253px;
+  }
+  @include media-tablet {
+    padding: 25px $content-padding-mobile 0;
+    row-gap: 132px;
+  }
+
+  &__image {
+    @include background-image(
+      url("../assets/contact.png"),
+      $background-size: contain
+    );
+    width: 400px;
+    height: 497px;
+    flex-shrink: 0;
+
+    @include media-netbook {
+      order: 2;
+      width: 200px;
+      height: 248px;
+      margin-left: 20px;
+    }
+    @include media-tablet {
+      width: 100px;
+      height: 124px;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    @include flex-parent($align-items: flex-start);
+    flex-basis: 710px;
+    column-gap: 64px;
+
+    @include media-for-contacts {
+      flex-direction: column;
+    }
+
+    @include media-netbook {
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      row-gap: 96px;
+      flex-basis: 0;
+    }
+    @include media-tablet {
+      row-gap: 79px;
+    }
+
+    &_tittle {
+      @extend %font-serif;
+      @include font(700, 40px, 52px);
+      padding-top: 8px;
+      color: $color-text-span;
+
+      @include media-netbook {
+        padding-top: 0;
+        flex-basis: 0;
+      }
+      @include media-tablet {
+        @include font(700, 25px, 33px);
+      }
+    }
+  }
+}
+
+.accordion-button {
+  @extend %transition;
+  @include button(16px, 16px, 50%);
+  background: #aea1a1;
+  background-image: url("../assets/arrow-contacts.svg");
+  background-size: 8px 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

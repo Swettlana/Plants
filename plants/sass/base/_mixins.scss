@@ -1,0 +1,59 @@
+@mixin font($weight, $size, $line-height) {
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin flex-parent(
+  $flex-direction: row,
+  $justify-content: space-between,
+  $align-items: center
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin button($width, $height, $border-radius) {
+  width: $width;
+  height: $height;
+  text-align: center;
+  border-radius: $border-radius;
+  background: transparent;
+  &:hover {
+    background: $color-hover;
+    color: $color-background-light;
+    cursor: pointer;
+  }
+}
+
+@mixin background-image($background-image, $background-size: cover) {
+  background-image: $background-image;
+  background-size: $background-size;
+  background-repeat: no-repeat;
+}
+@mixin media-for-contacts {
+  @media (max-width: 1390px) {
+    @content;
+  }
+}
+
+@mixin media-netbook {
+  @media (max-width: $netbook-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}

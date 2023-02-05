@@ -1,0 +1,95 @@
+.header-wrapper {
+  @extend %wrapper-dark;
+}
+
+.header {
+  @include flex-parent();
+  @include font(400, $font-size-nav, 49px);
+  @extend %font-serif;
+  padding: 43px $content-padding 42px;
+  max-width: $content-width;
+  margin: 0 auto;
+
+  @include media-netbook {
+    max-width: $tablet-max-width;
+    padding: 35px $content-padding-tablet;
+  }
+  @include media-tablet {
+    padding: 35px $content-padding-mobile;
+  }
+  @include media-mobile {
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  @include flex-parent();
+  @extend %transition;
+  margin-bottom: 3px;
+
+  &:hover {
+    transform: scale(1.1);
+
+    & > .logo__text {
+      color: $color-hover;
+    }
+  }
+
+  &__text {
+    @include font(400, $font-size-nav, 21px);
+    padding-left: 1px;
+    color: $color-text-dark;
+  }
+
+  &__img {
+    @include background-image(url("../assets/logo_img.svg"));
+    width: 21px;
+    height: 22px;
+    margin-bottom: 9px;
+  }
+}
+
+.nav-list {
+  @include flex-parent();
+  width: 452px;
+  color: $color-text-nav;
+
+  &__item {
+    @extend %transition;
+
+    &:hover {
+      font-weight: 700;
+      color: $color-hover;
+    }
+  }
+
+  @include media-tablet {
+    max-width: 300px;
+  }
+  @include media-mobile {
+    & > li {
+      @include font(400, 20px, 30px);
+    }
+
+    @include flex-parent(column, start, flex-start);
+    position: fixed;
+    transition: all 1s;
+    background-color: $color-background-light;
+    padding: 50px 5px 20px 20px;
+    color: $color-text-main;
+    width: 200px;
+    row-gap: 10px;
+    border-bottom-left-radius: 15px;
+    border-left: 2px solid $color-hover;
+    border-bottom: 2px solid $color-hover;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+
+  &.open {
+    transition: all 1s;
+    right: 0;
+  }
+}

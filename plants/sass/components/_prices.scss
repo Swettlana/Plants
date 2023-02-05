@@ -1,0 +1,108 @@
+.prices-wrapper {
+  @extend %wrapper-light;
+}
+
+.prices {
+  @include flex-parent($align-items: flex-start);
+  @extend %font-sans-serif;
+  color: $color-text-dark;
+  padding: 39px $content-padding 118px;
+
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 97px;
+  }
+  @include media-tablet {
+    padding: 25px $content-padding-mobile 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 20px;
+  }
+
+  &-left {
+    @include flex-parent(column, start, flex-start);
+    row-gap: 60px;
+
+    @include media-netbook {
+      row-gap: 58px;
+    }
+    @include media-tablet {
+      align-items: center;
+      row-gap: 38px;
+    }
+
+    &_tittle {
+      @include font(700, 40px, 48px);
+
+      @include media-netbook {
+        @include font(700, 35px, 42px);
+        padding-left: 15px;
+      }
+
+      @include media-tablet {
+        @include font(700, 25px, 30px);
+        padding-left: 1px;
+      }
+    }
+  }
+
+  &-right {
+    @include flex-parent(
+      $flex-direction: column,
+      $justify-content: start,
+      $align-items: flex-end
+    );
+    row-gap: 40px;
+
+    @include media-netbook {
+      padding-top: 100px;
+      row-gap: 29px;
+    }
+    @include media-tablet {
+      padding-top: 0;
+      row-gap: 20px;
+      align-items: center;
+    }
+
+    &_tittle {
+      @include font(700, 40px, 50px);
+      max-width: 452px;
+      text-align: right;
+
+      @include media-netbook {
+        @include font(700, 25px, 35px);
+        max-width: 296px;
+      }
+      @include media-tablet {
+        @include font(700, 20px, 35px);
+        max-width: 230px;
+        text-align: center;
+      }
+    }
+
+    &_button {
+      @include button(162px, 50px, 5px);
+      @include font(700, 20px, 26px);
+      @extend %transition;
+      @extend %font-serif;
+      border: 1px solid $color-hover;
+      color: $color-hover;
+
+      @include media-tablet {
+        @include button(121px, 35px, 5px);
+        @include font(700, 15px, 20px);
+      }
+    }
+
+    &_image {
+      margin: -5px 5px 0px 0;
+      width: 152px;
+      height: 175px;
+      background-image: url("../assets/prices-img.png");
+
+      @include media-tablet {
+        display: none;
+      }
+    }
+  }
+}
