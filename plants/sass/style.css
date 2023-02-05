@@ -304,6 +304,11 @@ span {
   line-height: 40px;
   padding-top: 96px;
 }
+@media (max-width: 1024px) {
+  .select {
+    padding: 0;
+  }
+}
 .select__header {
   display: flex;
   flex-direction: row;
@@ -317,6 +322,19 @@ span {
   color: #717171;
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  .select__header {
+    flex: 0;
+    margin-top: 0;
+    width: 450px;
+  }
+}
+@media (max-width: 660px) {
+  .select__header {
+    width: 300px;
+    padding: 5px 21px 5px 18px;
+  }
+}
 .select__header:hover, .select__header:active {
   box-shadow: none;
   background: #c1e698;
@@ -329,20 +347,6 @@ span {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 1024px) {
-  .select__header {
-    flex: 0;
-    margin-top: 0;
-    width: 450px;
-    padding: 28px 35px 24px 21px;
-  }
-}
-@media (max-width: 660px) {
-  .select__header {
-    width: 300px;
-    padding: 28px 21px 24px 18px;
-  }
-}
 .select__header_button {
   width: 16px;
   height: 16px;
@@ -353,7 +357,7 @@ span {
   background-repeat: no-repeat;
   background-position: center;
 }
-.select__header_button::hover {
+.select__header_button:hover {
   background-color: #8ba07e;
   background-image: url("../assets/arrow-select.svg");
   background-size: 12px 8px;
@@ -409,6 +413,11 @@ span {
   background: #edf2ec;
   border: 1px solid #000000;
   border-radius: 20px;
+}
+@media (max-width: 1096px) {
+  .select__addition-info {
+    padding: 12px;
+  }
 }
 .select__addition-info div {
   display: flex;
@@ -591,13 +600,13 @@ span {
     padding: 40px 50px 0;
     flex-direction: column;
     align-items: center;
-    row-gap: 210px;
+    row-gap: 253px;
   }
 }
 @media (max-width: 660px) {
   .contacts {
     padding: 25px 25px 0;
-    row-gap: 92px;
+    row-gap: 132px;
   }
 }
 .contacts__image {
@@ -630,6 +639,11 @@ span {
   align-items: flex-start;
   flex-basis: 710px;
   column-gap: 64px;
+}
+@media (max-width: 1390px) {
+  .contacts__content {
+    flex-direction: column;
+  }
 }
 @media (max-width: 1024px) {
   .contacts__content {

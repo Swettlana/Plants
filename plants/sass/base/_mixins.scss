@@ -34,6 +34,11 @@
   background-size: $background-size;
   background-repeat: no-repeat;
 }
+@mixin media-for-contacts {
+  @media (max-width: 1390px) {
+    @content;
+  }
+}
 
 @mixin media-netbook {
   @media (max-width: $netbook-width) {

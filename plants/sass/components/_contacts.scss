@@ -11,11 +11,11 @@
     padding: 40px $content-padding-tablet 0;
     flex-direction: column;
     align-items: center;
-    row-gap: 210px;
+    row-gap: 253px;
   }
   @include media-tablet {
     padding: 25px $content-padding-mobile 0;
-    row-gap: 92px;
+    row-gap: 132px;
   }
 
   &__image {
@@ -44,6 +44,10 @@
     @include flex-parent($align-items: flex-start);
     flex-basis: 710px;
     column-gap: 64px;
+
+    @include media-for-contacts {
+      flex-direction: column;
+    }
 
     @include media-netbook {
       flex-direction: column;
