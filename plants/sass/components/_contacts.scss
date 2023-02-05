@@ -1,0 +1,119 @@
+.contacts-wrapper {
+  @extend %wrapper-dark;
+}
+
+.contacts {
+  @include flex-parent($align-items: flex-start);
+  padding: 53px $content-padding 0;
+  column-gap: 113px;
+
+  @include media-netbook {
+    padding: 40px $content-padding-tablet 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 210px;
+  }
+  @include media-tablet {
+    padding: 25px $content-padding-mobile 0;
+    row-gap: 92px;
+  }
+
+  &__image {
+    @include background-image(
+      url("../assets/contact.png"),
+      $background-size: contain
+    );
+    width: 400px;
+    height: 497px;
+    flex-shrink: 0;
+
+    @include media-netbook {
+      order: 2;
+      width: 200px;
+      height: 248px;
+      margin-left: 20px;
+    }
+    @include media-tablet {
+      width: 100px;
+      height: 124px;
+      margin-left: 0;
+    }
+  }
+
+  &__content {
+    @include flex-parent($align-items: flex-start);
+    flex-basis: 710px;
+    column-gap: 64px;
+
+    @include media-netbook {
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      row-gap: 96px;
+      flex-basis: 0;
+    }
+    @include media-tablet {
+      row-gap: 79px;
+    }
+
+    &_tittle {
+      @extend %font-serif;
+      @include font(700, 40px, 52px);
+      padding-top: 8px;
+      color: $color-text-span;
+
+      @include media-netbook {
+        padding-top: 0;
+        flex-basis: 0;
+      }
+      @include media-tablet {
+        @include font(700, 25px, 33px);
+      }
+    }
+
+    &_accordion {
+      @include flex-parent();
+      @include font(400, 20px, 40px);
+      @extend %font-sans-serif;
+      flex: 1;
+      margin-top: 96px;
+      height: 50px;
+      padding: 0 35px 0 23px;
+      background: #d6e7d2;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      letter-spacing: 0.05em;
+      color: $color-tittle-welcome;
+
+      @include media-netbook {
+        flex: 0;
+        margin-top: 0;
+        width: 450px;
+        padding: 28px 35px 24px 21px;
+      }
+
+      @include media-tablet {
+        width: 300px;
+        padding: 28px 21px 24px 18px;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        & > .accordion-button {
+          border: 1px solid #e06733;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.accordion-button {
+  @extend %transition;
+  @include button(16px, 16px, 50%);
+  background: #aea1a1;
+  background-image: url("../assets/arrow-contacts.svg");
+  background-size: 8px 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

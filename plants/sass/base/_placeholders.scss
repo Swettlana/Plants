@@ -1,0 +1,28 @@
+%margin-auto {
+  margin: 0 auto;
+}
+
+%wrapper-width {
+  width: 100%;
+}
+
+%transition {
+  transition: all 0.4s;
+}
+
+%font-sans-serif {
+  font-family: $font-sans-serif;
+}
+%font-serif {
+  font-family: $font-serif;
+}
+
+%wrapper-dark {
+  width: 100%;
+  background-color: $color-background-dark;
+}
+
+%wrapper-light {
+  width: 100%;
+  background-color: $color-background-light;
+}

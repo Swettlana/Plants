@@ -1,0 +1,33 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $color-background-light;
+  width: 100%;
+  position: relative;
+
+  &.open-menu {
+    overflow: hidden;
+  }
+}
+
+section {
+  max-width: $content-width;
+  margin: 0 auto;
+
+  @include media-netbook {
+    max-width: $tablet-max-width;
+  }
+}
+span {
+  color: $color-text-span;
+}
+button {
+  background: transparent;
+  &:hover {
+    background: $color-hover;
+    color: $color-background-light;
+    cursor: pointer;
+  }
+}
