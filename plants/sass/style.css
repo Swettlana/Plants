@@ -385,6 +385,11 @@ span {
   color: #717171;
   border-bottom: 1px solid #717171;
 }
+.select__header.active {
+  box-shadow: none;
+  background: #c1e698;
+  border: 1px solid #d6e7d2;
+}
 .select.active .select__header {
   box-shadow: none;
   background: #c1e698;

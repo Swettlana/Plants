@@ -90,6 +90,12 @@
   }
 
   //OPEN SELECT
+  &__header.active {
+    box-shadow: none;
+    background: $color-select-header-active;
+    border: 1px solid $color-accordion-open;
+  }
+
   &.active &__header {
     box-shadow: none;
     background: $color-select-header-active;
