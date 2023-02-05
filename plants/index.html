@@ -68,48 +68,48 @@
         <div class="service__content">
           <h2 class="service__content-tittle">Service and our projects</h2>
           <div class="service__content-buttons">
-            <button class="service-button">Gardens</button>
-            <button class="service-button">Lawn</button>
-            <button class="service-button">Planting</button>
+            <button data-category="Gardens" class="service-button">Gardens</button>
+            <button data-category="Lawn" class="service-button">Lawn</button>
+            <button data-category="Planting" class="service-button">Planting</button>
           </div>
         </div>
         <div class="services">
-          <div class="service-item">
+          <div class="service-item" data-category="Gardens">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Garden care" src="./assets/first.png">
             </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/second.png">
             </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Lawn">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Lawn care" src="./assets/third.png">
             </div>
             <p class="service-item_tittle">Lawn care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/fourth.png">
             </div>
             <p class="service-item_tittle">Planting</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Gardens">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Garden care" src="./assets/fifth.png">
             </div>
             <p class="service-item_tittle">Garden care</p>
             <p class="service-item_text">Lorem Ipsum has been the industry</p>
           </div>
-          <div class="service-item">
+          <div class="service-item" data-category="Planting">
             <div class="image-wrapper">
               <img class="service-item_img" alt="Planting" src="./assets/sixth.png">
             </div>
@@ -124,17 +124,44 @@
         <div class="prices-left">
           <h2 class="prices-left_tittle">Prices</h2>
           <div class="accordion">
-            <div class="accordion__item">
-              <p class="accordion__item_text">Basics</p>
-              <div class="accordion__item_button"></div>
+
+            <div class="accordion__item ">
+              <div class="accordion__item_close">
+                <p>Basics</p>
+                <div class="accordion-switch" data-open="false"></div>
+              </div>
+              <div class="accordion__item_open">
+                <p class="description">Release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently</p>
+                <p class="price"><span>$15</span> / per hour</p>
+                <button><a href="#contacts">Order</a></button>
+              </div>
             </div>
-            <div class="accordion__item">
-              <p class="accordion__item_text">Standard</p>
-              <div class="accordion__item_button"></div>
+
+            <div class="accordion__item ">
+              <div class="accordion__item_close">
+                <p>Standard</p>
+                <div class="accordion-switch" data-open="false"></div>
+              </div>
+              <div class="accordion__item_open">
+                <p class="description">Release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently</p>
+                <p class="price"><span>$25</span> / per hour</p>
+                <button><a href="#contacts">Order</a></button>
+              </div>
             </div>
+
             <div class="accordion__item">
-              <p class="accordion__item_text">Pro care</p>
-              <div class="accordion__item_button"></div>
+              <div class="accordion__item_close">
+                <p>Pro care</p>
+                <div class="accordion-switch" data-open=false></div>
+              </div>
+              <div class="accordion__item_open">
+                <p class="description">Release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently</p>
+                <p class="price"><span>$35</span> / per hour</p>
+                <button><a href="#contacts">Order</a></button>
+              </div>
             </div>
           </div>
         </div>
@@ -151,9 +178,33 @@
         </div>
         <div class="contacts__content">
           <h2 class="contacts__content_tittle">Contact us</h2>
-          <div class="contacts__content_accordion">
-            <p class="accordion-text">City</p>
-            <div class="accordion-button"></div>
+          <div class="select" id="select">
+            <div class="select__header" id="select-header">
+              <p class="select__header_tettle" id="select-tittle">City</p>
+              <div class="select__header_button" id="header-button"></div>
+            </div>
+            <div class="select__body" id="select-body">
+              <div class="select__body_item">Canandaigua, NY
+              </div>
+              <div class="select__body_item">New York City </div>
+              <div class="select__body_item">Yonkers, NY </div>
+              <div class="select__body_item">Sherrill, NY </div>
+            </div>
+            <div class="select__addition-info" id="city-info">
+              <div>
+                <p class="caption">City:</p>
+                <p id="city" class="info-value">Canandaigua, NY</p>
+              </div>
+              <div>
+                <p class="caption">Phone:</p>
+                <p class="info-value" id="phone">+1 585 393 0001</p>
+              </div>
+              <div>
+                <p class="caption">Office address:</p>
+                <p class="info-value" id="address">151 Charlotte Street</p>
+              </div>
+              <a href="tel:+12124560002" class="call" id="call">Call us</a>
+            </div>
           </div>
         </div>
       </section>
@@ -168,13 +219,16 @@
       </div>
       <a class="footer__school" href="https://rs.school/js-stage0/" target="blank">Rolling Scopes School</a>
       <ul class="footer__social">
-        <li class="footer__social_inst"><a target="blank" href="https://www.instagram.com/"></a></li>
+        <li><a class="footer__social_inst" target="blank" href="https://www.instagram.com/"></a></li>
         <li><a class="footer__social_facebook" target="blank" href="https://www.facebook.com/"></a></li>
         <li><a class="footer__social_twitter" target="blank" href="https://twitter.com/"></a></li>
         <li><a class="footer__social_pinterest" target="blank" href="https://www.pinterest.com/"></a></li>
       </ul>
     </footer>
   </div>
-  <script src="./script.js"></script>
+  <script src="./scripts/burger-menu.js"></script>
+  <script src="./scripts/services.js"></script>
+  <script src="./scripts/accordion.js"></script>
+  <script src="./scripts/select.js"></script>
 </body>
 </html>
